@@ -1,0 +1,104 @@
+// out: null
+
+/*
+
+File Name: mixins.less
+Date: 
+Programmer: Tyler Smith Owings
+
+Parametric mixins for CAS215 Final Project 
+
+*/
+
+/* Parametric mixins for font attributes */
+
+.headerFontAttributes(@fontfamily; @fontColor; @fontSize) {
+    font-family: @fontfamily; 
+    color: @fontColor; // this uses our font color
+    font-size: @fontSize; // this uses our font size
+    font-weight: bold; // this uses no arguments... not everything has to be dynamic!
+    text-transform: uppercase;
+}
+
+
+/* End parametric mixins for font attributes */
+
+/* Parametric mixins for box with drop shadow attributes */
+
+.borderAndDropShadow( @borderThickness; @borderStyle; @borderColor; @shadowHorizontalOffset; @shadowVerticalOffset;   @shadowBlur; @shadowSpread; @shadowColor ) {
+    border: @borderThickness @borderStyle @borderColor; 
+    padding: @borderThickness * 4;
+    margin: @borderThickness * 4; 
+    -webkit-box-shadow: @shadowHorizontalOffset @shadowVerticalOffset   @shadowBlur @shadowSpread @shadowColor;
+    box-shadow: @shadowHorizontalOffset @shadowVerticalOffset @shadowBlur @shadowSpread @shadowColor;
+}
+
+/* End parametric mixins for box with drop shadow attributes */
+
+/* Parametric mixins for inset shadow */
+
+.innerShadow( @shadowHorizontalOffset; @shadowVerticalOffset;   @shadowBlur; @shadowSpread; @shadowColor ){
+    -webkit-box-shadow: @shadowHorizontalOffset @shadowVerticalOffset   @shadowBlur @shadowSpread @shadowColor;
+    box-shadow: @shadowHorizontalOffset @shadowVerticalOffset @shadowBlur @shadowSpread @shadowColor;
+}
+
+/* End parametric mixins for inset shadow */
+
+/* Mixins for footer/contact styles */
+
+.smallerFontAttributes(@fontFamily; @fontColor; @fontSize) {
+    font-family: @fontFamily;
+    color: @fontColor; 
+    font-size: @fontSize;
+    font-weight: lighter;
+}
+
+/* Parametric mixins for sidebar attributes */
+
+.sidebarAttributes(@borderThickness; @borderStyle; @borderColor; @backgroundColor; @fontSize) {  
+    border-top: @borderThickness @borderStyle @borderColor;
+    border-bottom: @borderThickness @borderStyle @borderColor;
+    background-color: @backgroundColor; 
+    font-size: @fontSize; 
+    margin-top: 3em; 
+    margin-bottom: 3em; 
+    
+    
+}
+
+/* Parametric mixins for sidebar attributes */
+
+/* Parametric mixins for figcaptions attributes */
+
+.figcaptionAttributes(@fontSize) {
+    font-size: @fontSize;
+    font-style: italic;
+    font-weight: lighter; 
+    padding-left: 3em;
+    padding-right: 3em;
+    text-align: center;
+}
+
+/* Parametric mixins for figcaptions attributes */
+
+/* Parametric mixins for drop cap */
+
+.dropCapAttributes(@fontColor; @fontSize; @fontFamily) { 
+        float: left; 
+        color: @fontColor; 
+        font-size: @fontSize; 
+        line-height: @fontSize / 10; 
+        padding-top: .05em; 
+        padding-right: .05em; 
+        padding-left: 0em; 
+        padding-bottom: .25em;
+        font-family: @fontFamily }
+
+/* End Parametric mixin for drop cap */ 
+
+.padding(@fontSize) {
+    padding-top: @fontSize * 2.5;
+    padding-bottom: @fontSize * 2;
+    padding-right: @fontSize; 
+    padding-left: @fontSize; 
+}

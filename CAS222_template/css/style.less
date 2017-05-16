@@ -1,0 +1,314 @@
+/*
+
+File Name: style.css
+Date: 05/23/16 
+Programmer: Tyler Smith Owings
+
+
+
+font-family: 'Fugaz One', cursive;
+font-family: 'Unica One', cursive;
+font-family: 'Yantramanav', sans-serif;
+
+
+*/
+
+@import 'palette.less';
+@import 'mixins.less';
+
+
+/* MOBILE STYLESHEET */
+ body{
+    font-family: 'Yantramanav', sans-serif;
+    font-size: 16px; 
+    line-height: 1.5em;
+	margin: 0;
+	width: 100%;
+	height: 100vh;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+     padding-top: 1.5em; 
+}
+header{
+	background:#ffffff; 
+	height:5em; 
+	line-height:2em;
+    h1 {
+        font-size: 1.8em; 
+    }
+    h2 {
+        font-size: 1.6em; 
+    }
+ }  
+main p {
+    padding-left: 2em; 
+    padding-right: 2em; 
+    padding-top: 1em; 
+    padding-bottom: 1em; 
+}
+footer {
+    #social {
+            text-align: right;
+        }
+    #info {
+            text-align: left;
+        }
+    padding-bottom: 2.5em;
+    line-height: 2em;
+    text-align: center;
+    background-color: @darkColor; 
+    h1 {
+        padding-top: 2em;
+        padding-bottom: .5em;
+        color: @color1; 
+        font-size: 1.5em;
+    }
+    ul {
+        font-size: .8em;
+        display: inline-block;
+        padding-left: 1em;
+        padding-right: 1em;
+    }
+    a { 
+        text-decoration: none; 
+        color: @color1;   
+    }
+    a:hover {
+        color: #FFF; 
+        text-decoration:none;
+        
+    }
+    p {
+        font-size: .6em; 
+        color: @color1; 
+    }
+}
+
+/* H TAGS STYLING LESS */
+
+h1 {
+    .headerFontAttributes('Fugaz One', cursive; @darkColor; 2em);
+    padding-left: .25em;
+}
+
+h2 {
+    .headerFontAttributes('Unica One', cursive; @color1; 1.75em);
+    padding-left: .5em;
+}
+
+h3 {
+    .headerFontAttributes('Fugaz One', cursive; @lightColor; 1.5em);
+    background-color: #000;
+    display: inline; 
+    padding-left: .5em;
+    padding-right: 1em; 
+}
+
+h4 {
+    .headerFontAttributes('Yantramanav', sans-serif; @darkColor; 1em);
+    padding-left: .5em;
+}
+
+h5 {
+    .headerFontAttributes('Unica One', cursive; @darkColor; 1em);
+    padding-left: .5em;
+}
+
+h6 {
+    .headerFontAttributes('Unica One', cursive; @darkColor; .75em);
+    padding-left: .5em;
+}
+
+/* HAMBURGER MENU */ 
+
+.hamburger{
+  background:none;
+  background-color: #fff; 
+  position:absolute;
+  top:0;
+  right:0;
+  line-height:45px;
+  padding: .25em;
+  color:#999;
+  border:0;
+  font-size:2.5em;
+  font-weight:bold;
+  cursor:pointer;
+  outline:none;
+  z-index:10000000000000;
+}
+.cross{
+  background:none;
+  background-color: #fff; 
+  position:absolute;
+  top:0px;
+  right:0;
+  padding: .25em;
+  color:#999;
+  border:0;
+  font-size:3.5em;
+  line-height:65px;
+  font-weight:bold;
+  cursor:pointer;
+  outline:none;
+  z-index:10000000000000;
+}
+.menu{
+    z-index:1000000; 
+    font-weight:bold; 
+    font-size:1em; 
+    width:100%; 
+    background:#000000;  
+    position:absolute; 
+    text-align:center;
+}
+.menu ul {
+    margin: 0; 
+    padding: 0; 
+    list-style-type: none; 
+    list-style-image: none;
+}
+.menu li {
+    display: block;   
+    padding:15px 0 15px 0; 
+    border-bottom:#FF0000 1px solid;
+    text-transform: uppercase; 
+}
+.menu li:hover{
+    display: block; 
+    background:#333; 
+    padding:15px 0 15px 0; 
+    border-bottom:#FFF 1px solid;
+}
+.menu ul li a { 
+    text-decoration:none;  
+    margin: 0px; color:#FFF;
+}
+.menu ul li a:hover {
+    color: #666; 
+    text-decoration:none;
+}
+.menu a{
+    text-decoration:none; 
+    color:#FFF;
+}
+.menu a:hover{
+    text-decoration:none; 
+    color:#666;
+}
+
+.glyphicon-home{
+  color:white; 
+  font-size:1.5em; 
+  margin-top:5px; 
+  margin:0 auto;
+}
+
+.desktop-menu {
+    display: none; 
+}
+/* END HAMBURGER MENU */
+
+.bold {
+    display: block; 
+}
+/*
+
+TABLET STYLESHEET
+
+The following CSS affects all screen sizes larger than 480 pixels wide.
+
+*/
+
+
+@media only screen and (min-width: 480px) {
+    header {
+        h1 {
+        font-size: 2.5em; 
+    }
+    h2 {
+        font-size: 2em; 
+    }
+        
+    }
+    .menu, .hamburger, .cross {
+        display: none; 
+    }
+
+    .desktop-menu {
+        display: block;
+    }
+    .desktop-menu ul { 
+        text-align: center; 
+        background: #000; 
+    }
+    .desktop-menu li {
+        font-family: 'Yantramanav', sans-serif, cursive; 
+        color: #fff; 
+        display: inline-block; 
+        padding: 1em; 
+        text-transform: uppercase; 
+        
+    }
+    .desktop-menu li:hover {
+        color: #FF0000; 
+
+    }
+
+} 
+
+/*
+
+DESKTOP STYLESHEET
+
+The following CSS affects all screen sizes larger than 1024 pixels wide.
+
+*/
+
+@media only screen and (min-width: 1025px) {
+    body {
+        font-size: 20px; 
+    }
+    .menu, .hamburger, .cross {
+        display: none; 
+    }
+
+    .desktop-menu {
+        display: block;
+    }
+    .desktop-menu ul { 
+        background: #fff; 
+        float: right;
+        padding-right: 2em; 
+    }
+    .desktop-menu li {
+        font-family: 'Yantramanav', sans-serif, cursive; 
+        display: inline-block; 
+        height:60px; 
+	    line-height:60px; 
+        padding-right: .5em; 
+        color: #000; 
+        font-weight: bold; 
+        
+        
+    }
+        
+    .desktop-menu li:hover {
+        font-weight: bolder;
+        text-decoration:none; 
+        color: #FF0000;
+    }
+    header {
+        float: left; 
+        h1 {
+            font-size: 2.5em; 
+        }
+        h2 {
+            font-size: 2em; 
+        }
+    }
+
+
+}
+    
+
